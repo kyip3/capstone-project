@@ -9,3 +9,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+a{
+  text-decoration: none; //get rid of blue underline
+  color: black
+}
+
+* {
+  box-sizing: border-box; //to make sure adding padding will not change the size(width/height) of the box
+}
