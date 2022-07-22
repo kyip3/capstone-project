@@ -1,7 +1,7 @@
 import "./category-item.styles.scss";
 
 const CategoryItem = (props) => {
-const {id,title,imageUrl} = props.category;
+  const { id, title, imageUrl } = props.category;
 
   return (
     <div key={id} className="category-container">
