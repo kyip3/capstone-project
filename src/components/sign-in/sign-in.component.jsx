@@ -7,6 +7,7 @@ import {
   signInWithGooglePopup,
   signInWithGoogleRedirect,
 } from "../../utils/firebase/firebase.utils";
+import SignUpForm from "../sign-up-form/sign-up-form.component";
 
 const SignIn = () => {
   //for sign in direction
@@ -41,6 +42,7 @@ const SignIn = () => {
       <h1>sign in page</h1>
       <button onClick={logGoogleUser}>SIGN IN</button>
       <button onClick={logGoogleUserRedirect}>SIGN IN REDIRECT</button>
+      <SignUpForm/>
     </div>
   );
 };
