@@ -8,7 +8,6 @@ import {
 import "./sign-in-form.styles.scss";
 import Button from "../button/button.component";
 import { signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
-import { UserContext } from "../context/user.context";
 
 const defaultFormFields = {
   email: "",
@@ -18,9 +17,6 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
-  // 1. Grab the setCurrentUser form useContext
-  const { setCurrentUser } = useContext(UserContext);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -36,7 +32,7 @@ const SignInForm = () => {
       );
 
       // 2. Set the user to setCurrentUser
-      setCurrentUser(user);
+      //setCurrentUser(user);
 
       resetFormFields();
     } catch (error) {
@@ -63,8 +59,7 @@ const SignInForm = () => {
     const response = await signInWithGooglePopup();
     const { user } = response;
 
-    setCurrentUser(user);
-    await createUserDocumentFromAuth(user);
+    //await createUserDocumentFromAuth(user);
   };
 
   return (
